@@ -52,6 +52,24 @@ return [
                 ]
             ]
         ],
+        [
+            'title' => 'Accessi',
+            'icon' => 'fab fa-accessible-icon',
+            'bullet' => 'line',
+            'root' => true,
+            'submenu' => [
+                [
+                    'title' => 'Elenco accessi',
+                    'bullet' => 'dot',
+                    'page' => 'accessi/elenco'
+                ],
+                [
+                    'title' => 'Nuovo accesso',
+                    'bullet' => 'dot',
+                    'page' => 'accessi/nuovo'
+                ]
+            ]
+        ],
         // [
         //     'title' => 'Pages',
         //     'icon' => 'media/svg/icons/Shopping/Barcode-read.svg',

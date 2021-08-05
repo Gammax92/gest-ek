@@ -31,7 +31,6 @@ Route::get('/icons/svg', 'PagesController@svg');
 // Quick search dummy route to display html elements in search dropdown (header search)
 Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
 
-
 //clienti
 Route::group(['prefix' => 'clienti', 'as' => 'clients.'], function () {
     Route::get('elenco', [\App\Http\Controllers\ClientController::class,'index'])->name('index');
@@ -42,8 +41,6 @@ Route::group(['prefix' => 'clienti', 'as' => 'clients.'], function () {
     Route::post('modifica/{id}', [\App\Http\Controllers\ClientController::class,'update'])->name('update');
 });
 
-
-
 //domini
 Route::group(['prefix' => 'domini', 'as' => 'domains.'], function () {
     Route::get('elenco', [\App\Http\Controllers\DomainController::class,'index'])->name('index');
@@ -53,9 +50,15 @@ Route::group(['prefix' => 'domini', 'as' => 'domains.'], function () {
     Route::get('modifica/{id}', [\App\Http\Controllers\DomainController::class,'edit'])->name('edit');
     Route::post('modifica/{id}', [\App\Http\Controllers\DomainController::class,'update'])->name('update');
 
-
     Route::post('notify-expiration/{domain}', [\App\Http\Controllers\DomainController::class,'notifyDomainExpiration'])->name('notify-expiration');
+});
 
-
-
+//accessi
+Route::group(['prefix' => 'accessi', 'as' => 'accesses.'], function () {
+    Route::get('elenco', [\App\Http\Controllers\AccessController::class,'index'])->name('index');
+    Route::get('nuovo', [\App\Http\Controllers\Accessontroller::class,'create'])->name('create');
+    Route::post('nuovo', [\App\Http\Controllers\AccessController::class,'store'])->name('store');
+    Route::get('visualizza/{id}', [\App\Http\Controllers\AccessController::class,'show'])->name('show');
+    Route::get('modifica/{id}', [\App\Http\Controllers\AccessController::class,'edit'])->name('edit');
+    Route::post('modifica/{id}', [\App\Http\Controllers\AccessController::class,'update'])->name('update');
 });
