@@ -29,12 +29,17 @@ datepickers.forEach((el, i) => {
 $('.select2').select2();
 
 
-
+// TODO: diocane non va, la table uccide i js
 //TYPPPYS
-let tippys = document.querySelectorAll('.js--tippy');
-tippys.forEach((el, i) => {
-    let t = tippy(el, {
-      content: el.title
+setTimeout(function () {
+    let tippys = document.querySelectorAll('.js--tippy');
+    console.log(tippys);
+    tippys.forEach((el, i) => {
+        let t = tippy(el, {
+          content: el.title
+        });
+        t.popper.classList.add(el.dataset.tippiclass);
+        console.log(t);
     });
-    t.popper.classList.add(el.dataset.tippiclass);
-});
+
+}, 1500);

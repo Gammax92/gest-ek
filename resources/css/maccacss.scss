@@ -3,6 +3,16 @@
   // border-radius: 100%;
   &.btn-secondary{
       // background-color: red !important;
+     // &:hover{
+     //      background-color: red !important;
+     //  }
+  }
+  &.btn-primary{
+      // background-color: red !important;
+     &:hover{
+         border-color: red !important;
+          background-color: red !important;
+      }
   }
   i{
     padding-right: 0rem !important;
