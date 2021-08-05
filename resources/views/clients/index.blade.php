@@ -183,8 +183,10 @@
                         {{-- <td>{{$client->reference_person}}</td> --}}
                         <td>{{$client->piva}}</td>
                         <td align="right">
-                            <a class="btn btn-sm btn-secondary" href="{{route('clients.show', ['id' => $client->id])}}"><i class="far fa-eye"></i></a>
-                            <a class="btn btn-sm btn-primary" href="{{route('clients.edit', ['id' => $client->id])}}"><i class="far fa-edit"></i></a>
+
+
+                            <a data-tippiclass="tippy-popper-base"  title="Visualizza" class="js--tippy btn btn-sm btn-secondary" href="{{route('clients.show', ['id' => $client->id])}}"><i class="far fa-eye"></i></a>
+                            <a data-tippiclass="tippy-popper-base"  title="Modifica" class="js--tippy btn btn-sm btn-primary" href="{{route('clients.edit', ['id' => $client->id])}}"><i class="far fa-edit"></i></a>
                         </td>
 
                         {{-- <td>{{$client->address}}</td> --}}

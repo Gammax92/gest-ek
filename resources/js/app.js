@@ -1,4 +1,6 @@
 import flatpickr from "flatpickr";
+import tippy from 'tippy.js';
+
 require('./bootstrap');
 
 // custom select2
@@ -25,3 +27,14 @@ datepickers.forEach((el, i) => {
 
 // TODO: fix select2
 $('.select2').select2();
+
+
+
+//TYPPPYS
+let tippys = document.querySelectorAll('.js--tippy');
+tippys.forEach((el, i) => {
+    let t = tippy(el, {
+      content: el.title
+    });
+    t.popper.classList.add(el.dataset.tippiclass);
+});

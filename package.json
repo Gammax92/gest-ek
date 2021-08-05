@@ -101,6 +101,7 @@
         "sweetalert2": "^10.14.0",
         "tempusdominus-bootstrap-4": "^5.1.2",
         "tinymce": "^5.6.2",
+        "tippy.js": "^6.3.1",
         "toastr": "^2.1.4",
         "typeahead.js": "^0.11.1",
         "uppy": "^1.25.0",
